@@ -1,5 +1,6 @@
 #include "SceneState.h"
 #include "SceneStateMachine.h"
+#include <SFML\Window\Window.hpp>
 
 namespace Game
 {

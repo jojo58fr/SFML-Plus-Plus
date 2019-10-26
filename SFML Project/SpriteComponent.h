@@ -1,4 +1,7 @@
+#ifndef SPRITECOMPONENT_H
+#define SPRITECOMPONENT_H
 #pragma once
+
 #include <SFML\Graphics.hpp>
 
 #include "Components.h"
@@ -11,7 +14,7 @@ namespace ECS
 	class SpriteComponent : public Component
 	{
 	private:
-		TransformComponent* position;
+		TransformComponent* position = new TransformComponent();
 
 		sf::Texture texture;
 		sf::Sprite sprite;
@@ -64,3 +67,5 @@ namespace ECS
 	};
 
 }
+
+#endif /* SPRITECOMPONENT_H */

@@ -1,7 +1,10 @@
+#ifndef MANAGER_H
+#define MANAGER_H
 #pragma once
+
 #include <vector>
 
-#include "ECS.h";
+#include "ECS.h"
 
 namespace ECS
 {
@@ -41,3 +44,5 @@ namespace ECS
 		}
 	};
 }
+
+#endif /* MANAGER_H */

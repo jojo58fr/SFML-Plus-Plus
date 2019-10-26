@@ -1,9 +1,12 @@
+#ifndef ENTITY_H
+#define ENTITY_H
 #pragma once
+
 #include <bitset>
 #include <array>
 #include <vector>
 
-#include "ECS.h";
+#include "ECS.h"
 
 namespace ECS
 {
@@ -68,3 +71,5 @@ namespace ECS
 		//Example : gameobject.getComponent<PositionComponent>().setXpos(25);
 	};
 }
+
+#endif /* ENTITY_H */

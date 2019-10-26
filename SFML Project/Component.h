@@ -1,5 +1,8 @@
+#ifndef COMPONENT_H
+#define COMPONENT_H
 #pragma once
-#include "ECS.h";
+
+#include "ECS.h"
 
 namespace ECS
 {
@@ -38,4 +41,6 @@ namespace ECS
 
 	};
 }
+
+#endif /* ENTITY_H */
 

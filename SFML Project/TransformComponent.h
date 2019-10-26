@@ -1,4 +1,7 @@
+#ifndef TRANSFORMCOMPONENT_H
+#define TRANSFORMCOMPONENT_H
 #pragma once
+
 #include "Components.h"
 #include "Vector2D.h"
 
@@ -13,7 +16,7 @@ namespace ECS
 
 
 	public:
-
+		//TODO Encapsuler position
 		Vector2D position;
 
 		TransformComponent()
@@ -53,3 +56,5 @@ namespace ECS
 	};
 
 }
+
+#endif /* TRANSFORMCOMPONENT_H */

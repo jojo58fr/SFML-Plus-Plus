@@ -1,3 +1,5 @@
+#ifndef PLAYERCOMPONENT_H
+#define PLAYERCOMPONENT_H
 #pragma once
 
 #include "Components.h"
@@ -20,3 +22,5 @@ namespace Game
 
 	};
 }
+
+#endif /* PLAYERCOMPONENT_H */
