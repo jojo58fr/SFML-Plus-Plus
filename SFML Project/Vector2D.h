@@ -1,4 +1,7 @@
+#ifndef VECTOR2D_H
+#define VECTOR2D_H
 #pragma once
+
 #include <ostream>
 
 namespace Game
@@ -33,3 +36,5 @@ namespace Game
 
 	};
 }
+
+#endif /* VECTOR2D_H */

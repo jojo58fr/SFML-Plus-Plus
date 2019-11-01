@@ -1,4 +1,7 @@
+#ifndef GAMEOBJECT_H
+#define GAMEOBJECT_H
 #pragma once
+
 #include <SFML\Graphics.hpp>
 #include <SFML\System.hpp>
 
@@ -23,4 +26,6 @@ namespace Game
 
 	};
 }
+
+#endif /* GAMEOBJECT_H */
 

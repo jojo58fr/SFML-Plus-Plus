@@ -13,9 +13,6 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
-    <Filter Include="Header Files\ECS">
-      <UniqueIdentifier>{3b007a4a-45e4-45e0-bd57-726758d3da83}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Source Files\Components">
       <UniqueIdentifier>{9f0d6428-f8f7-4d10-b82c-d2f42ff417ce}</UniqueIdentifier>
     </Filter>
@@ -28,7 +25,13 @@
     <Filter Include="Header Files\Components">
       <UniqueIdentifier>{bc4f68b8-be45-41f2-8797-45c5cbd10bbc}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Header Files\ECS\Core">
+    <Filter Include="Header Files\Core">
+      <UniqueIdentifier>{1a2083bd-2e20-4540-a3ee-df34c444baf1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Core\ECS">
+      <UniqueIdentifier>{3b007a4a-45e4-45e0-bd57-726758d3da83}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Core\ECS\Core">
       <UniqueIdentifier>{1b990da0-793e-4245-abd4-a0e02b0998ee}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
@@ -48,16 +51,25 @@
     <ClCompile Include="ConfigurationManager.cpp">
       <Filter>Source Files\Managers</Filter>
     </ClCompile>
-    <ClCompile Include="DisplayManager.cpp">
-      <Filter>Source Files\Managers</Filter>
-    </ClCompile>
-    <ClCompile Include="DrawManagement.cpp">
-      <Filter>Source Files\Managers</Filter>
-    </ClCompile>
     <ClCompile Include="ReaderWriterManager.cpp">
       <Filter>Source Files\Managers</Filter>
     </ClCompile>
     <ClCompile Include="SceneStateMachine.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Window.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ApplicationManager.cpp">
+      <Filter>Source Files\Managers</Filter>
+    </ClCompile>
+    <ClCompile Include="Bitmask.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="InputSystem.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="SceneSplashScreen.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
@@ -66,25 +78,16 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="ECS.h">
-      <Filter>Header Files\ECS</Filter>
+      <Filter>Header Files\Core\ECS</Filter>
     </ClInclude>
     <ClInclude Include="SpriteComponent.h">
-      <Filter>Header Files\ECS</Filter>
+      <Filter>Header Files\Core\ECS</Filter>
     </ClInclude>
     <ClInclude Include="TransformComponent.h">
-      <Filter>Header Files\ECS</Filter>
-    </ClInclude>
-    <ClInclude Include="Vector2D.h">
-      <Filter>Header Files</Filter>
+      <Filter>Header Files\Core\ECS</Filter>
     </ClInclude>
     <ClInclude Include="PlayerComponent.h">
       <Filter>Header Files\Components</Filter>
-    </ClInclude>
-    <ClInclude Include="DrawManagement.h">
-      <Filter>Header Files\Managers</Filter>
-    </ClInclude>
-    <ClInclude Include="DisplayManager.h">
-      <Filter>Header Files\Managers</Filter>
     </ClInclude>
     <ClInclude Include="ConfigurationManager.h">
       <Filter>Header Files\Managers</Filter>
@@ -96,18 +99,36 @@
       <Filter>Header Files\Components</Filter>
     </ClInclude>
     <ClInclude Include="Entity.h">
-      <Filter>Header Files\ECS\Core</Filter>
+      <Filter>Header Files\Core\ECS\Core</Filter>
     </ClInclude>
     <ClInclude Include="Component.h">
-      <Filter>Header Files\ECS\Core</Filter>
+      <Filter>Header Files\Core\ECS\Core</Filter>
     </ClInclude>
     <ClInclude Include="Manager.h">
-      <Filter>Header Files\ECS\Core</Filter>
+      <Filter>Header Files\Core\ECS\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="Bitmask.h">
+      <Filter>Header Files\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="ApplicationManager.h">
+      <Filter>Header Files\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="InputSystem.h">
+      <Filter>Header Files\Core</Filter>
     </ClInclude>
     <ClInclude Include="SceneState.h">
-      <Filter>Header Files</Filter>
+      <Filter>Header Files\Core</Filter>
     </ClInclude>
     <ClInclude Include="SceneStateMachine.h">
+      <Filter>Header Files\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="Vector2D.h">
+      <Filter>Header Files\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="Window.h">
+      <Filter>Header Files\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="SceneSplashScreen.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

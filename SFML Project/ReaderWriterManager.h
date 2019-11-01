@@ -1,4 +1,7 @@
+#ifndef READERWRITERMANAGER_H
+#define READERWRITERMANAGER_H
 #pragma once
+
 #include <string>
 #include <exception>
 #include <iostream>
@@ -20,4 +23,6 @@ namespace Game
 	};
 
 }
+
+#endif /* READERWRITERMANAGER_H */
 

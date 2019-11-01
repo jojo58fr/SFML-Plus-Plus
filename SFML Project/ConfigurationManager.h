@@ -1,4 +1,7 @@
+#ifndef CONFIGURATIONMANAGER_H
+#define CONFIGURATIONMANAGER_H
 #pragma once
+
 #include <map>
 #include <string>
 #include <exception>
@@ -31,4 +34,6 @@ namespace Game
 	};
 
 }
+
+#endif /* CONFIGURATIONMANAGER_H */
 

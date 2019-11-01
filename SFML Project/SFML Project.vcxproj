@@ -136,33 +136,39 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Bitmask.cpp" />
     <ClCompile Include="ConfigurationManager.cpp" />
-    <ClCompile Include="DrawManagement.cpp" />
     <ClCompile Include="GameObject.cpp" />
+    <ClCompile Include="InputSystem.cpp" />
     <ClCompile Include="main.cpp" />
-    <ClCompile Include="DisplayManager.cpp" />
+    <ClCompile Include="ApplicationManager.cpp" />
     <ClCompile Include="PlayerComponent.cpp" />
     <ClCompile Include="ReaderWriterManager.cpp" />
+    <ClCompile Include="SceneSplashScreen.cpp" />
     <ClCompile Include="SceneStateMachine.cpp" />
     <ClCompile Include="Vector2D.cpp" />
+    <ClCompile Include="Window.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Bitmask.h" />
     <ClInclude Include="Component.h" />
     <ClInclude Include="Components.h" />
     <ClInclude Include="ConfigurationManager.h" />
-    <ClInclude Include="DisplayManager.h" />
-    <ClInclude Include="DrawManagement.h" />
+    <ClInclude Include="ApplicationManager.h" />
     <ClInclude Include="ECS.h" />
     <ClInclude Include="Entity.h" />
     <ClInclude Include="GameObject.h" />
+    <ClInclude Include="InputSystem.h" />
     <ClInclude Include="Manager.h" />
     <ClInclude Include="PlayerComponent.h" />
+    <ClInclude Include="SceneSplashScreen.h" />
     <ClInclude Include="SceneState.h" />
     <ClInclude Include="SceneStateMachine.h" />
     <ClInclude Include="TransformComponent.h" />
     <ClInclude Include="ReaderWriterManager.h" />
     <ClInclude Include="SpriteComponent.h" />
     <ClInclude Include="Vector2D.h" />
+    <ClInclude Include="Window.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

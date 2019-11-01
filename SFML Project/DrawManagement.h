@@ -1,4 +1,7 @@
+#ifndef DRAWMANAGER_H
+#define DRAWMANAGER_H
 #pragma once
+
 #include <SFML\Graphics.hpp>
 #include <SFML\System.hpp>
 
@@ -20,4 +23,6 @@ namespace Game
 		void draw(const sf::Drawable& drawObject);
 	};
 }
+
+#endif /* DRAWMANAGER_H */
 

@@ -1,4 +1,8 @@
+#ifndef SCENESTATE_H
+#define SCENESTATE_H
 #pragma once
+
+#include "Window.h"
 
 namespace Game
 {
@@ -24,7 +28,9 @@ namespace Game
 		virtual void ProcessInput() {};
 		virtual void Update(float deltaTime) {};
 		virtual void LateUpdate(float deltaTime) {};
-		virtual void Draw(Window& window) {};
+		virtual void Draw(Window* window) {};
 	};
 }
+
+#endif /* SCENESTATE_H */
 

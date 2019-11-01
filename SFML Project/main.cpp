@@ -1,6 +1,6 @@
 #include <iostream>
 
-#include "DisplayManager.h"
+#include "ApplicationManager.h"
 #include "ConfigurationManager.h"
 #include "Components.h"
 
@@ -9,18 +9,20 @@ using namespace Game;
 
 int main()
 {
-	//Intiialize Random Seed
-	srand(static_cast<unsigned>(time(0)));
 
 	//Initialize Application
-	DisplayManager* app = new DisplayManager();
-	//ConfigurationManager* file = new ConfigurationManager("C:\\Users\\Joach\\source\\repos\\SFML Project\\x64\\Debug\\settings.cfg");
+	ApplicationManager app;
 
 	//Game Loops
-	while (app->IsRunning())
+	while (app.IsRunning())
 	{
-		app->update();
-		app->render();
+		app.CaptureInput();
+
+		app.Update();
+		app.LateUpdate();
+		app.Draw();
+
+		app.CalculateDeltaTime();
 	}
 
 

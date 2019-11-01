@@ -1,63 +1,11 @@
-#include "SceneState.h"
 #include "SceneStateMachine.h"
-#include <SFML\Window\Window.hpp>
 
 namespace Game
 {
-
-	/*void SceneStateMachine::AddState(StateRef newState, bool isReplacing)
+	SceneStateMachine::SceneStateMachine() : scenes(0)
 	{
-		this->isAdding = true;
-		this->isReplacing = isReplacing;
-
-		this->newState = move(newState);
+		this->curScene = 0;
 	}
-
-	void SceneStateMachine::RemoveState()
-	{
-		this->isRemoving = true;
-	}
-
-	void SceneStateMachine::ProcessStateChanges()
-	{
-		if (this->isRemoving && !this->states.empty())
-		{
-			this->states.pop();
-
-			if (!this->states.empty())
-			{
-				this->states.top()->Resume();
-			}
-
-			this->isRemoving = false;
-		}
-
-		if (this->isAdding)
-		{
-			if (!this->states.empty())
-			{
-				if (this->isReplacing)
-				{
-					this->states.pop();
-				}
-				else
-				{
-					this->states.top()->Pause();
-				}
-			}
-
-			this->states.push(move(this->newState));
-			this->states.top()->Init();
-			this->isAdding = false;
-		}
-	}
-
-	StateRef& SceneStateMachine::GetActiveState()
-	{
-		return this->states.top();
-	}*/
-
-	SceneStateMachine::SceneStateMachine() : scenes(0), curScene(0) { }
 
 	void SceneStateMachine::ProcessInput()
 	{
@@ -83,7 +31,7 @@ namespace Game
 		}
 	}
 
-	void SceneStateMachine::Draw(Window& window)
+	void SceneStateMachine::Draw(Window* window)
 	{
 		if (curScene)
 		{
@@ -95,9 +43,11 @@ namespace Game
 	{
 		auto inserted = scenes.insert(std::make_pair(insertedSceneID, scene));
 
+		insertedSceneID++;
+
 		inserted.first->second->OnCreate();
 
-		return insertedSceneID++;
+		return insertedSceneID - 1;
 	}
 
 	void SceneStateMachine::Remove(unsigned int id)
@@ -107,9 +57,14 @@ namespace Game
 		{
 			if (curScene == it->second)
 			{
+				// If the scene we are removing is the current scene, 
+				// we also want to set that to a null pointer so the scene 
+				// is no longer updated.
 				curScene = nullptr;
 			}
 
+			// We make sure to call the OnDestroy method 
+			// of the scene we are removing.
 			it->second->OnDestroy();
 
 			scenes.erase(it);
@@ -123,9 +78,11 @@ namespace Game
 		{
 			if (curScene)
 			{
+				// If we have a current scene, we call its OnDeactivate method.
 				curScene->OnDeactivate();
 			}
 
+			// Setting the current scene ensures that it is updated and drawn.
 			curScene = it->second;
 
 			curScene->OnActivate();

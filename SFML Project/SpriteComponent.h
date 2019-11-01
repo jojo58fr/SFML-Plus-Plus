@@ -52,7 +52,7 @@ namespace ECS
 
 		void render() override
 		{
-			DrawManagement::getInstance()->draw(this->sprite);
+			//TODO Draw Funct
 		}
 
 		void setSprite(const char* path)
